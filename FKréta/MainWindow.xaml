@@ -1,0 +1,26 @@
+﻿<Window x:Class="FKréta.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FKréta"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="tablazat" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,197,640,80"/>
+        <Button x:Name="osztalyzas" Content="Osztály szerint" HorizontalAlignment="Left" Margin="1091,144,0,0" VerticalAlignment="Top" Height="48" Width="179" Click="osztalyzas_Click" FontSize="24"/>
+        <DataGrid x:Name="osztalyok" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="645,197,5,80"/>
+        <TextBox x:Name="osztalyT" HorizontalAlignment="Left" Margin="1091,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49" TextChanged="osztalyT_TextChanged"/>
+        <Button x:Name="osztalyfel" Content="Osztály felvétele" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Height="48" Width="179" Click="osztalyfel_Click" FontSize="24"/>
+        <TextBox x:Name="osztalyfelT" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
+        <TextBox x:Name="tanulokerT" HorizontalAlignment="Left" Margin="210,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49" TextChanged="tanulokerT_TextChanged"/>
+        <Label Content="Tanuló keresés" HorizontalAlignment="Left" Margin="210,86,0,0" VerticalAlignment="Top" Height="49" Width="179" FontSize="24"/>
+        <TextBox x:Name="tanulofelTO" HorizontalAlignment="Left" Margin="410,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
+        <Button x:Name="tanulofel" Content="Tanuló felvétele" HorizontalAlignment="Left" Margin="410,144,0,0" VerticalAlignment="Top" Height="48" Width="179" Click="tanulofel_Click" FontSize="24"/>
+        <TextBox x:Name="tanulofelT" HorizontalAlignment="Left" Margin="410,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
+        <Button x:Name="jegyfel" Content="Jegy felvétele" HorizontalAlignment="Left" Margin="829,86,0,0" VerticalAlignment="Top" Height="48" Width="179" Click="jegyfel_Click" FontSize="24"/>
+        <TextBox x:Name="jegyfelT" HorizontalAlignment="Left" Margin="645,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
+        <TextBox x:Name="jegyfelTT" HorizontalAlignment="Left" Margin="645,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
+        <TextBox x:Name="jegyfelNT" HorizontalAlignment="Left" Margin="645,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
+    </Grid>
+</Window>
