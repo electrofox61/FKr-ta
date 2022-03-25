@@ -152,41 +152,42 @@ namespace FKréta
                     var szamol = osztalyl.Where(x => x == tanulofelTO.Text).Count();
                     if (szamol < 1)
                         throw new Exception("Nem létezik ez az osztály!");
+                    foreach (var item in File.ReadAllLines("Tanulók.txt"))
+                    {
+                        adat.Add(new Adatok(item));
+                    }
+                    Random r = new Random();
+                    var ujtanulo = adat.Select(x => new {
+                        Sorszam = x.Sorszam
+                    }).Count();
+                    StreamWriter sr = new StreamWriter("Tanulók.txt");
+                    sr.WriteLine(ujtanulo + 1 + ";" + tanulofelTO.Text + ";" + tanulofelT.Text);
+                    sr.Close();
+                    foreach (var item in File.ReadAllLines("Tanulók.txt"))
+                    {
+                        adat.Add(new Adatok(item));
+                    }
+                    var minden = adat.Select(x => new {
+                        Sorszam = x.Sorszam,
+                        Nev = x.Nev,
+                        Osztaly = x.Osztaly,
+                        Matematika = jegye[r.Next(0, 4)],
+                        Programozas = jegye[r.Next(0, 4)],
+                        Halozatok = jegye[r.Next(0, 4)],
+                        IKTprojektmunka = jegye[r.Next(0, 4)],
+                    });
+                    tablazat.ItemsSource = minden;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            foreach (var item in File.ReadAllLines("Tanulók.txt"))
-            {
-                adat.Add(new Adatok(item));
-            }
-            Random r = new Random();
-            var ujtanulo = adat.Select(x => new {
-                Sorszam = x.Sorszam
-            }).Count();
-            StreamWriter sr = new StreamWriter("Tanulók.txt");
-            sr.WriteLine(ujtanulo+1+";"+tanulofelTO.Text+";"+tanulofelT.Text);
-            sr.Close();
-            foreach (var item in File.ReadAllLines("Tanulók.txt"))
-            {
-                adat.Add(new Adatok(item));
-            }
-            var minden = adat.Select(x => new {
-                Sorszam = x.Sorszam,
-                Nev = x.Nev,
-                Osztaly = x.Osztaly,
-                Matematika = jegye[r.Next(0, 4)],
-                Programozas = jegye[r.Next(0, 4)],
-                Halozatok = jegye[r.Next(0, 4)],
-                IKTprojektmunka = jegye[r.Next(0, 4)],
-            });
-            tablazat.ItemsSource = minden;
         }
 
         private void jegyfel_Click(object sender, RoutedEventArgs e)
         {
+            //ez valamiért hihetetlenül sok időbe telt, és így se sikerült megoldani hogy 1 jegyet adjak 1 embernek, majd ezt az adatot hozzáadjam az eredeti táblázathoz
             try
             {
                 if (jegyfelT.Text == "" || jegyfelTT.Text == "" || jegyfelNT.Text == "")

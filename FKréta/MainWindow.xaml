@@ -5,22 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FKréta"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280" Loaded="Window_Loaded">
+        Title="MainWindow" Height="768" Width="1366" Loaded="Window_Loaded" Background="#FF0DB59A">
     <Grid>
-        <DataGrid x:Name="tablazat" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,197,640,80"/>
-        <Button x:Name="osztalyzas" Content="Osztály szerint" HorizontalAlignment="Left" Margin="1091,144,0,0" VerticalAlignment="Top" Height="48" Width="179" Click="osztalyzas_Click" FontSize="24"/>
-        <DataGrid x:Name="osztalyok" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="645,197,5,80"/>
-        <TextBox x:Name="osztalyT" HorizontalAlignment="Left" Margin="1091,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49" TextChanged="osztalyT_TextChanged"/>
-        <Button x:Name="osztalyfel" Content="Osztály felvétele" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Height="48" Width="179" Click="osztalyfel_Click" FontSize="24"/>
-        <TextBox x:Name="osztalyfelT" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
-        <TextBox x:Name="tanulokerT" HorizontalAlignment="Left" Margin="210,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49" TextChanged="tanulokerT_TextChanged"/>
-        <Label Content="Tanuló keresés" HorizontalAlignment="Left" Margin="210,86,0,0" VerticalAlignment="Top" Height="49" Width="179" FontSize="24"/>
-        <TextBox x:Name="tanulofelTO" HorizontalAlignment="Left" Margin="410,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
-        <Button x:Name="tanulofel" Content="Tanuló felvétele" HorizontalAlignment="Left" Margin="410,144,0,0" VerticalAlignment="Top" Height="48" Width="179" Click="tanulofel_Click" FontSize="24"/>
-        <TextBox x:Name="tanulofelT" HorizontalAlignment="Left" Margin="410,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
-        <Button x:Name="jegyfel" Content="Jegy felvétele" HorizontalAlignment="Left" Margin="829,86,0,0" VerticalAlignment="Top" Height="48" Width="179" Click="jegyfel_Click" FontSize="24"/>
-        <TextBox x:Name="jegyfelT" HorizontalAlignment="Left" Margin="645,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
-        <TextBox x:Name="jegyfelTT" HorizontalAlignment="Left" Margin="645,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
-        <TextBox x:Name="jegyfelNT" HorizontalAlignment="Left" Margin="645,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49"/>
+        <DataGrid x:Name="tablazat" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,267,640,10"/>
+        <Button x:Name="osztalyzas" Content="Osztály szerint csoportosítás" HorizontalAlignment="Left" Margin="923,213,0,0" VerticalAlignment="Top" Height="48" Width="336" Click="osztalyzas_Click" FontSize="24" Foreground="#FF00FF6D" FontFamily="Franklin Gothic Demi" Background="#7FDDDDDD" BorderBrush="{x:Null}"/>
+        <DataGrid x:Name="osztalyok" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="734,267,10,10"/>
+        <TextBox x:Name="osztalyT" HorizontalAlignment="Left" Margin="740,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Height="49" TextChanged="osztalyT_TextChanged" Background="#E5FFFFFF"/>
+        <Button x:Name="osztalyfel" Content="Osztály felvétele" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Height="48" Width="179" Click="osztalyfel_Click" FontSize="24" Foreground="#FF00FF6D" FontFamily="Franklin Gothic Demi" BorderBrush="{x:Null}" Background="#7FDDDDDD"/>
+        <TextBox x:Name="osztalyfelT" HorizontalAlignment="Left" Margin="10,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49" Background="#E5FFFFFF"/>
+        <TextBox x:Name="tanulokerT" HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="49" TextChanged="tanulokerT_TextChanged" ToolTip="Az osztály neve" Background="#E5FFFFFF"/>
+        <Label Content="Tanuló keresés" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Height="49" Width="179" FontSize="24" Foreground="#FF00FF6D" FontFamily="Franklin Gothic Demi"/>
+        <TextBox x:Name="tanulofelTO" HorizontalAlignment="Left" Margin="396,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Height="48" Background="#E5FFFFFF"/>
+        <Button x:Name="tanulofel" Content="Tanuló felvétele" HorizontalAlignment="Left" Margin="301,159,0,0" VerticalAlignment="Top" Height="48" Width="185" Click="tanulofel_Click" FontSize="24" Foreground="#FF00FF6D" FontFamily="Franklin Gothic Demi" BorderBrush="{x:Null}" Background="#7FDDDDDD"/>
+        <TextBox x:Name="tanulofelT" HorizontalAlignment="Left" Margin="212,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Height="49" RenderTransformOrigin="0.489,0.575" Background="#E5FFFFFF"/>
+        <Button x:Name="jegyfel" Content="Jegy felvétele" HorizontalAlignment="Left" Margin="772,155,0,0" VerticalAlignment="Top" Height="48" Width="368" Click="jegyfel_Click" FontSize="24" Foreground="#FF00FF6D" FontFamily="Franklin Gothic Demi" Background="#7FDDDDDD" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="jegyfelT" HorizontalAlignment="Left" Margin="867,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Height="49" Background="#E5FFFFFF"/>
+        <TextBox x:Name="jegyfelTT" HorizontalAlignment="Left" Margin="682,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Height="49" Background="#E5FFFFFF"/>
+        <TextBox x:Name="jegyfelNT" HorizontalAlignment="Left" Margin="1050,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="48" Background="#E5FFFFFF"/>
+        <Label Content="Tanuló neve" HorizontalAlignment="Left" Margin="212,43,0,0" VerticalAlignment="Top" Height="49" Width="179" FontSize="24" Foreground="#FF00FF6D" FontFamily="Franklin Gothic Demi"/>
+        <Label Content="Tanuló osztálya" HorizontalAlignment="Left" Margin="396,43,0,0" VerticalAlignment="Top" Height="49" Width="196" FontSize="24" Foreground="#FF00FF6D" FontFamily="Franklin Gothic Demi"/>
+        <Label Content="Jegy" HorizontalAlignment="Left" Margin="682,43,0,0" VerticalAlignment="Top" Height="49" Width="179" FontSize="24" Foreground="#FF00FF6D" FontFamily="Franklin Gothic Demi" FontStretch="Normal" FontStyle="Normal"/>
+        <Label Content="Tanuló osztálya" HorizontalAlignment="Left" Margin="867,42,0,0" VerticalAlignment="Top" Height="49" Width="195" FontSize="24" FontFamily="Franklin Gothic Demi" Foreground="#FF00FF6D"/>
+        <Label Content="Tanuló neve" HorizontalAlignment="Left" Margin="1050,42,0,0" VerticalAlignment="Top" Height="49" Width="179" FontSize="24" Foreground="#FF00FF6D" FontFamily="Franklin Gothic Demi"/>
+        <Label Content="FKréta" HorizontalAlignment="Left" Margin="561,0,0,0" VerticalAlignment="Top" Width="306" Height="52" FontSize="36" FontFamily="Goudy Stout" Foreground="#FF00FF6D" Background="#4C909090"/>
     </Grid>
 </Window>
